@@ -29,7 +29,7 @@ services:
 
 # GHCR build versions
   hypertrophy_edu_backend:
-    image: ghcr.io/camoroony/hypertrophy-edu-backend:latest
+    image: ghcr.io/camorany/hypertrophy-edu-backend:latest
     container_name: hypertrophy-edu_backendcontainer
     restart: always
     environment:
@@ -44,7 +44,7 @@ services:
       - vectorstore_data:/app/database/chroma/chroma_dbs
 
   hypertrophy_edu_frontend:
-    image: ghcr.io/camoroony/hypertrophy-edu-frontend:latest
+    image: ghcr.io/camorany/hypertrophy-edu-frontend:latest
     container_name: hypertrophy-edu_frontendcontainer
     restart: always
     ports:
