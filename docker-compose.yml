@@ -35,6 +35,7 @@ services:
     environment:
       SQLDB_URL: mysql+pymysql://root:password@sql/hypertrophy_edu_sqldb 
       MONGODB_URL: mongodb://mongo:27017/hypertrophy_edu_mongodb
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
     depends_on:
       - sql  
       - mongo
