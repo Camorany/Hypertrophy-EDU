@@ -1,8 +1,8 @@
 from models.utilities.context_formatting import format_context
 from database.chroma.init_chroma_db import get_chroma_vectorstore
 from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema.output_parser import StrOutputParser
+from langchain_classic.prompts import ChatPromptTemplate
+from langchain_classic.schema.output_parser import StrOutputParser
 from security.openai_api_key import get_openai_api_key
 
 OPENAI_API_KEY = get_openai_api_key()

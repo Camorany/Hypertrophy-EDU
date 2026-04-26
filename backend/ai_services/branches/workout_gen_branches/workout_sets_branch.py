@@ -1,6 +1,6 @@
-from langchain.schema.runnable import RunnableLambda
+from langchain_classic.schema.runnable import RunnableLambda
 from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
+from langchain_classic.prompts import ChatPromptTemplate
 from models.ai_models import MUSCLE_GROUP_SETS_SCHEMA, INDIVIDUAL_MUSCLES
 from models.utilities.context_formatting import format_context
 from database.chroma.init_chroma_db import get_chroma_vectorstore

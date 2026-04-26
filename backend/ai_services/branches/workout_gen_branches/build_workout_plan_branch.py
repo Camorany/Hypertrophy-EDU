@@ -1,5 +1,5 @@
 from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
+from langchain_classic.prompts import ChatPromptTemplate
 from models.input_models import WorkoutGenInput
 from models.ai_models import WORKOUT_PLAN_FUNCTION_SCHEMA
 from security.openai_api_key import get_openai_api_key
