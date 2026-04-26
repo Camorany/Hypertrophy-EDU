@@ -1,4 +1,3 @@
-from langchain import hub
 from langchain_openai import ChatOpenAI
 from langchain_classic.prompts import ChatPromptTemplate
 from langchain_classic.schema.output_parser import StrOutputParser
