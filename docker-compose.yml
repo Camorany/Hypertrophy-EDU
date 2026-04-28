@@ -33,7 +33,7 @@ services:
     container_name: hypertrophy-edu_backendcontainer
     restart: always
     environment:
-      SQLDB_URL: mysql+pymysql://root:password@sql/hypertrophy_edu_sqldb 
+      SQLDB_URL: mysql+pymysql://app_user:app_password@sql:3306/hypertrophy_edu_sqldb
       MONGODB_URL: mongodb://mongo:27017/hypertrophy_edu_mongodb
       OPENAI_API_KEY: ${OPENAI_API_KEY}
     depends_on:
@@ -59,8 +59,10 @@ services:
     container_name: hypertrophy-edu_dbcontainer
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: hypertrophy_edu_sqldb
+     MYSQL_ROOT_PASSWORD: P4$$w0Rd16
+     MYSQL_DATABASE: hypertrophy_edu_sqldb
+     MYSQL_USER: app_user
+     MYSQL_PASSWORD: app_password
     ports:
       - "3306:3306"
     volumes:
