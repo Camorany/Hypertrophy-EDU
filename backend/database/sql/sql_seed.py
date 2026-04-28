@@ -5,11 +5,13 @@ import glob
 def is_sql_seeded():
 
     sql_conn = pymysql.connect(
-    host="sql",
-    user="root",
-    password="P4$$w0Rd16",
-    database="hypertrophy_edu_sqldb"
-)
+        host="sql",
+        port=3306,
+        user="app_user",
+        password="app_password",
+        database="hypertrophy_edu_sqldb"
+    )
+    
     with sql_conn.cursor() as cursor:
         cursor.execute("SELECT COUNT(*) FROM user")  # adjust table
         count = cursor.fetchone()[0]
@@ -19,11 +21,12 @@ def seed_sql():
     print("Seeding MySQL from SQL file...")
 
     sql_conn = pymysql.connect(
-    host="sql",
-    user="root",
-    password="P4$$w0Rd16",
-    database="hypertrophy_edu_sqldb"
-)
+        host="sql",
+        port=3306,
+        user="app_user",
+        password="app_password",
+        database="hypertrophy_edu_sqldb"
+    )
 
     dummy_data_file = glob.glob(os.path.join(os.path.dirname(__file__), "sqldummydata", "sqldummydata.sql"))
 
