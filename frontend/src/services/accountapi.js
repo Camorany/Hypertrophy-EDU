@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const base_url = "http://localhost:8000/users"
+const base_url = "/api/users"
 
 // Account management API calls
 

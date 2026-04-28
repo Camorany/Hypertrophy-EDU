@@ -11,7 +11,7 @@ from security.hashing import hash_password, verify_password
 from security.jwt_token import verify_token, create_access_token
 
 router = APIRouter(
-    prefix="/users"
+    prefix="/api/users"
 )
 
 @router.get("/verify-token", response_model=UserSQL)

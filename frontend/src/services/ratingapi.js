@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const base_url = "http://localhost:8000/ratings"
+const base_url = "/api/ratings"
 
 // Rating API calls
 

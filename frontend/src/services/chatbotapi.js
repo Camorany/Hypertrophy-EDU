@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const base_url = "http://localhost:8000/chatbot"
+const base_url = "/api/chatbot"
 
 // Chatbot API calls
 

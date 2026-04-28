@@ -18,7 +18,7 @@ from ai_services.gen_workout_info import generate_exercise_overview, generate_wo
 import io
 
 router = APIRouter(
-    prefix="/workouts"
+    prefix="/api/workouts"
 )
 
 @router.get("")

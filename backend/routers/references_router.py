@@ -7,7 +7,7 @@ from security.jwt_token import verify_token
 
 
 router = APIRouter(
-    prefix="/references"
+    prefix="/api/references"
 )
 
 @router.get("")

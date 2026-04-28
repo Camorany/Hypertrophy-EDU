@@ -11,7 +11,7 @@ from security.jwt_token import verify_token
 from ai_services.gen_chat import generate_chat
 
 router = APIRouter(
-    prefix="/chatbot"
+    prefix="/api/chatbot"
 )
 
 @router.get("")

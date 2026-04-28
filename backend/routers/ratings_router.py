@@ -8,7 +8,7 @@ from database.sql.init_sql_db import get_db_session
 from database.sql.rating_db import create_rating_db, delete_rating_db, get_rating_db, get_ratings_by_workout_db
 
 router = APIRouter(
-    prefix="/ratings"
+    prefix="/api/ratings"
 )
 
 @router.get("")

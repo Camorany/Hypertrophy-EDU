@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const base_url = "http://localhost:8000/workouts"
+const base_url = "/api/workouts"
 
 // Workout Plan API calls
 
