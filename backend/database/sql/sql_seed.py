@@ -5,7 +5,7 @@ import glob
 def is_sql_seeded():
 
     sql_conn = pymysql.connect(
-    host="127.0.0.1",
+    host="sql",
     user="root",
     password="P4$$w0Rd16",
     database="hypertrophy_edu_sqldb"
@@ -19,7 +19,7 @@ def seed_sql():
     print("Seeding MySQL from SQL file...")
 
     sql_conn = pymysql.connect(
-    host="127.0.0.1",
+    host="sql",
     user="root",
     password="P4$$w0Rd16",
     database="hypertrophy_edu_sqldb"
