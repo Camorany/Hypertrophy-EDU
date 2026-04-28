@@ -39,8 +39,8 @@ services:
     depends_on:
       - sql  
       - mongo
-    ports:
-      - "8000:8000" 
+    expose:
+      - "8000" 
     volumes:
       - vectorstore_data:/app/database/chroma/chroma_dbs
 
