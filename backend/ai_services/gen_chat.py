@@ -39,8 +39,12 @@ def generate_generic_chat(user_prompt: str, chat_history):
 
     context = format_context(vs_results)
 
+    print(f"formatted context for chat response: {context}")
+
     context_text = context["documents"]
+    print(f"context documents : {context_text}")
     sources = context["sources"]
+    print(f"context sources: {sources}")
 
     ai_context = (
     "\n\n You will be provided with some relevant documents and a chat history to use when answering the question"
