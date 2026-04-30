@@ -14,8 +14,12 @@ embeddings = OpenAIEmbeddings(model="text-embedding-3-small", api_key=OPENAI_API
 def get_chroma_vectorstore(db_name: str, db_data: str):
  
  current_dir = os.path.dirname(os.path.abspath(__file__))
+
+ print(f"current directory used for fetching vector store: {current_dir}")
  
  persistent_directory = os.path.join(current_dir, "chroma_dbs", db_name)
+
+ print(f"persistent directory for vector store db: {persistent_directory}")
 
  if not os.path.exists(persistent_directory):
      print(f"Chroma_db: '{db_name}' does not exist, initialising vector store...")
@@ -61,7 +65,7 @@ def get_chroma_vectorstore(db_name: str, db_data: str):
      vectorstore = Chroma.from_documents(chunks, embeddings, persist_directory=persistent_directory)
      print(f"Vectorstore: '{db_name}' initialised.\n")
  else:
-        print(f"Chroma_db: '{db_name}' already exists, no need to initialise.")
+        print(f"Chroma_db: '{db_name}' already exists, no need to x.")
         vectorstore = Chroma(persist_directory=persistent_directory, embedding_function=embeddings)
 
  
